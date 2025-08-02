@@ -1,0 +1,88 @@
+// this script was used to obtain the relation schematisation of the DB of this project
+// utilisateurs
+Table users {
+  id integer [primary key, not null]
+  username varchar [not null, unique]
+  email varchar
+  password_hash varchar
+  name varchar
+  surname varchar
+  subscription_type varchar
+  subscription_expiration date
+  role varchar
+  created_at timestamp
+}
+
+// abonnements / amis
+Table follows {
+  id integer [primary key]
+  follower_id integer [not null, ref: > users.id]
+  followed_id integer [not null, ref: > users.id]
+  created_at timestamp
+}
+
+// groupes musculaires
+Table muscle_groups {
+  id integer [primary key]
+  name varchar [not null, unique]
+}
+
+// types d'exercices
+Table exercise_types {
+  id integer [primary key]
+  name varchar [not null, unique]
+  description text
+  muscle_group_id integer [ref: > muscle_groups.id]
+}
+
+// exercices
+Table exercises {
+  id integer [primary key]
+  name varchar [not null, unique]
+  description text
+  type_id integer [ref: > exercise_types.id]
+}
+
+// séances réalisées
+Table sessions {
+  id integer [primary key]
+  user_id integer [not null, ref: > users.id]
+  coach_id integer [ref: > users.id]
+  session_date date
+  start_time time
+  duration_minutes integer
+  notes text
+  created_at timestamp
+}
+
+// exercices dans une séance
+Table session_exercises {
+  id integer [primary key]
+  session_id integer [not null, ref: > sessions.id]
+  exercise_id integer [not null, ref: > exercises.id]
+  notes text
+}
+
+// séries (détail de chaque set)
+Table exercise_sets {
+  id integer [primary key]
+  session_exercise_id integer [not null, ref: > session_exercises.id]
+  set_number integer [not null]
+  reps integer [not null]
+  weight_kg float
+  execution_time_seconds integer
+  rest_before_seconds integer
+  rpe integer
+  notes text
+}
+
+// séances planifiées (futures)
+Table planned_sessions {
+  id integer [primary key]
+  user_id integer [not null, ref: > users.id]
+  scheduled_date date
+  scheduled_time time
+  coach_id integer [ref: > users.id]
+  objective text
+  created_at timestamp
+}
