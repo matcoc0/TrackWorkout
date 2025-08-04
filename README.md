@@ -16,7 +16,7 @@ Roadmap :
 7) Solidification du backend
 
 POUR APRES :
-l'objectif est de fournir au client une expérience lui permettant d'optimiser sa séance et sa progression avec une LLM intégrée :
+l'objectif est de fournir au client une expérience lui permettant d'optimiser sa séance et sa progression avec une LLM puis un RAG intégrée :
 exemple :
 - messages d'encouragement au client au vu de sa progression
 - Au développé couché, j'ai une vive douleur à l'arrière de l'épaule gauche, quels exercices pourraient y remédier ?
