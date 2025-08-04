@@ -12,12 +12,13 @@ Roadmap :
 3) API endpoint : add, delete et modify : user, follow, exercice, session, session_exercice, exercise_sets, add request
 4) Mise en place de l'authentification avec les tokens des users
 5) mise en place de graphs, de tracking possible de sa progression
-6) Interaction de suivi entre users 
+6) Interaction de suivi entre users : demande d'ami, comparaison, training streak (3 entrainements hebdos sur 12 semaines de suite), graphs de progression
 7) Solidification du backend
 
 POUR APRES :
 l'objectif est de fournir au client une expérience lui permettant d'optimiser sa séance et sa progression avec une LLM intégrée :
 exemple :
+- messages d'encouragement au client au vu de sa progression
 - Au développé couché, j'ai une vive douleur à l'arrière de l'épaule gauche, quels exercices pourraient y remédier ?
 - j'ai un défaut triceps, comment remédier à ce déséquilibre ?
 - Quel sport pourrait m'aider dans mon objectif physique perso ?
