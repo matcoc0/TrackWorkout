@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(title="Fitness Tracker API")
 
 @app.get("/")
-def root():
-    return {"message": "TrackWorkout backend is running!"}
+def read_root():
+    return {"message": "Bienvenue sur l'API Fitness Tracker!"}
