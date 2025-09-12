@@ -25,3 +25,8 @@ exemple :
 
 idéalement, il faudrait que le micro puisse être détecté, et que le chat écrit puisse être ouvert
 L'objectif de ce site est de pouvoir englober l'entiereté d'un use case global lié à un client.
+
+# Partie développement
+Pour ce projet une VM Ubuntu a été créée dans WSL. Le développement de cette application a été fait grâce à l'extension WSL qui a permis à la fois de gérer l'ensemble des dépendences de la MV et de la venv à l'intérieur.
+instructions montre ce qui a été fait comme étapes précisément.
+un requirement .txt permet l'installation de l'ensemble des dépendances, du venv ainsi que de toutes les dépendances qui ont été faites.
