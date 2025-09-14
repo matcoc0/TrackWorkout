@@ -103,7 +103,14 @@ CREATE TABLE session_templates (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
-
+CREATE TABLE template_exercises (
+    id SERIAL PRIMARY KEY,
+    template_id INTEGER NOT NULL REFERENCES session_templates(id),
+    exercise_id INTEGER NOT NULL REFERENCES exercises(id),
+    recommended_sets INTEGER,
+    recommended_reps INTEGER,
+    recommended_weight FLOAT
+);
 
 -- VUE POUR PERFORMANCES ET GRAPHIQUES
 CREATE VIEW performance_view AS
