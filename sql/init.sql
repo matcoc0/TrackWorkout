@@ -1,4 +1,16 @@
 -- UTILISATEURS
+DROP TABLE IF EXISTS template_exercises CASCADE;
+DROP TABLE IF EXISTS session_templates CASCADE;
+DROP TABLE IF EXISTS planned_sessions CASCADE;
+DROP TABLE IF EXISTS exercise_sets CASCADE;
+DROP TABLE IF EXISTS session_exercises CASCADE;
+DROP TABLE IF EXISTS sessions CASCADE;
+DROP TABLE IF EXISTS exercises CASCADE;
+DROP TABLE IF EXISTS exercise_types CASCADE;
+DROP TABLE IF EXISTS muscle_groups CASCADE;
+DROP TABLE IF EXISTS follows CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR NOT NULL UNIQUE,
@@ -112,6 +124,7 @@ CREATE TABLE template_exercises (
     recommended_weight FLOAT
 );
 
+/*
 -- VUE POUR PERFORMANCES ET GRAPHIQUES
 CREATE VIEW performance_view AS
 SELECT
@@ -134,3 +147,4 @@ JOIN exercise_types et ON e.type_id = et.id
 JOIN muscle_groups mg ON et.muscle_group_id = mg.id
 JOIN sessions s ON se.session_id = s.id
 JOIN users u ON s.user_id = u.id;
+*/

@@ -1,3 +1,4 @@
+# Data & DB
 numpy==2.2.6
 pandas==2.3.2
 psycopg2-binary==2.9.10
@@ -5,3 +6,22 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 six==1.17.0
 tzdata==2025.2
+
+# FastAPI framework
+fastapi==0.111.1
+uvicorn[standard]==0.23.2
+
+# Auth / Security
+python-jose==3.3.0
+passlib[bcrypt]==1.7.4
+passlib
+# ORM
+SQLAlchemy==2.0.21
+
+# Validation & Serialization
+pydantic==2.5.1
+
+# Testing
+pytest==7.4.2
+httpx
+pytest-asyncio==0.21.0
